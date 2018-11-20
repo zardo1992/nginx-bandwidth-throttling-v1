@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/main.css" type="text/css">
+    <title>Speed Throttling</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+</head>
+
+<body>
+    <script src="src/lib/jquery.min.js"></script>
+    <script src="src/lib/bootstrap.min.js"></script>
+    <script src="src/lib/bootstrapvalidator.min.js"></script>
+    <script type="text/javascript" src="src/js/main.js"></script>
+
+    <div class="loader" id="loader"></div>
+    <div class="container" id="container">
+        <span id="title">
+            <h1>NGINX HTTP band limitation</h1>
+        </span>
+        <div class="main-login main-center">
+            <form class="form-horizontal" id="form">
+                <div class="form-group">
+                    <label for="userid" class="cols-sm-2 control-label">Enter the <i>User ID</i> value (optional)</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input type="text" class="form-control" name="userid" id="userid" placeholder="for instance: 123456789" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ipaddr" class="cols-sm-2 control-label">Enter the <i>IP Address</i> you want to throttle (mandatory)</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                            <input type="text" class="form-control" name="ipaddr" id="ipaddr" placeholder="for instance: 185.26.140.59" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ipaddr" class="cols-sm-2 control-label">Enter the <i>throttling rate value </i> expressed in <b>"kB/s" (mandatory)</b>
+                        <span class="italic">(enter "0k" if you want to remove throttling)</span></label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
+                            <input type="text" class="form-control" name="bps" id="bps" placeholder="for instance: 300k" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Confirm</button>
+                </div>
+            </form>
+            <textarea disabled></textarea>
+        </div>
+    </div>
+</body>
+
+</html>
